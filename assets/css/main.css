@@ -3136,3 +3136,83 @@ input, select, textarea {
 					}
 
 	}
+
+
+.block--heading {
+	text-align: center;
+}
+
+.block--subheading {
+	margin-top: -10px;
+	text-align: center;
+	font-size: 18px;
+}
+
+.block--image {
+	text-align: center;
+	margin: 30px 0;
+	position: relative;
+}
+
+.block--image img {
+	max-width: 80%;
+	max-height: 300px;
+}
+
+/** timeline **/
+
+.timeline {
+	max-width: 800px;
+	position: relative;
+	margin: 0 auto 10px auto;
+	border-left: 1px dashed #ababab;
+}
+
+.timeline--block {
+	padding: 10px;
+	align-items: center;
+  	display: flex;
+}
+
+.timeline--dot {
+	position: absolute;
+	height: 10px;
+	width: 10px;
+	border-radius: 10px;
+	border: 3px solid var(--color-primary);
+	left: -8px;
+	background: white;
+}
+
+.timeline--time {
+	flex-basis: 100px;
+	text-align: center;
+	font-weight: bold;
+	font-size: 16px;
+}
+
+.timeline--info {
+	flex: 1;
+}
+
+.timeline--info--title {
+	font-weight: bold;
+}
+
+.timeline--info--secondary {
+	font-size: 17px;
+}
+
+.timeline--info--link {
+	font-size: 14px;
+}
+
+.timeline--info--location {
+	margin-top: 5px;
+	display: flex;
+	font-size: 14px;
+}
+
+.timeline--info--location--icon {
+	flex-basis: 25px;
+}
