@@ -3138,6 +3138,27 @@ input, select, textarea {
 	}
 
 
+.block--heading {
+	text-align: center;
+}
+
+.block--subheading {
+	margin-top: -10px;
+	text-align: center;
+	font-size: 18px;
+}
+
+.block--image {
+	text-align: center;
+	margin: 30px 0;
+	position: relative;
+}
+
+.block--image img {
+	max-width: 80%;
+	max-height: 300px;
+}
+
 /** timeline **/
 
 .timeline {
