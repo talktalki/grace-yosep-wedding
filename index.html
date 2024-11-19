@@ -22,10 +22,7 @@
 		<p>We're getting married!</p>
 		<p>05. 03. 25</p>
 	</header>
-	
-	<div class="header--date">
-		May 3rd 2025
-	</div>
+
 	<div class="header--countdown">
 		<span class="highlight" id="countdown--days">-</span> days <span class="highlight" id="countdown--hours">-</span> hours <span class="highlight" id="countdown--minutes">-</span> minutes
 	</div>
@@ -238,6 +235,30 @@
 <script src="assets/js/breakpoints.min.js"></script>
 <script src="assets/js/util.js"></script>
 <script src="assets/js/main.js"></script>
+
+<script>
+	var countDownDate = new Date("May 3, 2025 17:00:00").getTime();
+
+	var countdown = setInterval(function() {
+		var now = new Date().getTime();
+		var distance = countDownDate - now;
+
+		var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+		var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+		var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+
+		document.getElementById("countdown--days").innerHTML = days
+		document.getElementById("countdown--hours").innerHTML = hours
+		document.getElementById("countdown--minutes").innerHTML = + minutes
+
+		if (distance < 0) {
+			clearInterval(countdown);
+			document.getElementById("countdown--days").innerHTML = '🎉'
+			document.getElementById("countdown--hours").innerHTML = '🎉'
+			document.getElementById("countdown--minutes").innerHTML = '🎉'
+		}
+	}, 1000);
+</script>
 
 </body>
 </html>
